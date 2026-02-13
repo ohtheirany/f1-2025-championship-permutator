@@ -1,37 +1,37 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Driver {
     private String name;
-    private int points = 0;
+    private int points;
 
-        /*
-    public Driver(String name, int points){
+    private final List<Permutation> permutations = new ArrayList<>();
+
+    public Driver() {}
+
+    public Driver(String name) {
         this.name = name;
-        this.points += points;
+        this.points = 0;
     }
-         */
 
-    public Driver(String name){
+    public Driver(String name, int points) {
         this.name = name;
+        this.points = points;
     }
 
-    //getters
-    public String getName(){
-        return this.name;
+    public String getName() { return this.name; }
+    public int getPoints() { return this.points; }
+    public List<Permutation> getPermutations() { return this.permutations; }
+
+    public void setName(String name) { this.name = name; }
+    public void setPoints(int points) { this.points = points; }
+    public void addPoints(int points) { this.points += points; }
+
+    public void addPermutation(Permutation permutation) {
+        this.permutations.add(permutation);
     }
 
-    //setters
-    public void setName(String name){
-        this.name = name;
-    }
-
-    public void addPoints(int points){
-        this.points += points;
-    }
-
-    //others
-    public boolean morePointsThan(Driver other){
-        if (this.points > other.points){
-            return true;
-        }
-        return false;
+    public boolean morePointsThan(Driver other) {
+        return this.points > other.points;
     }
 }

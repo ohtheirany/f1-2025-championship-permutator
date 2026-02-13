@@ -29,11 +29,20 @@ public class Drivers2025 {
 
     // add driver
     public static void addDriver (Driver driver) {
-        // raceProcessor's ___ method knows the position
         STANDINGS.add(driver);
         driverTotal += 1;
+    }
 
-        // to add — if driver points = 0, add to the end of the ArrayList
+    public static Driver[] getContenders(){
+        int leaderPoints = Drivers2025.getStandings().getFirst().getPoints();
+        ArrayList<Driver> contenders = new ArrayList<>();
+        for (Driver driver: Drivers2025.getStandings()){
+            int gapToLeader = leaderPoints - driver.getPoints();
+            if (gapToLeader >= 0 && gapToLeader <= 25){
+                contenders.add(driver);
+            }
+        }
+        return contenders.toArray(new Driver[0]);
     }
 
     //sort

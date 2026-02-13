@@ -1,37 +1,22 @@
 import java.util.Map;
 
 public class Race {
-    /*
-    private static final String[] CALENDAR_2025 = {"australia", "china", "japan", "bahrain", "saudiArabia", "miami", "emiliaRomagna", "monaco",
-                                                    "spain", "canada", "australian", "britain", "belgium", "hungary", "netherlands", "italy",
-                                                    "singapore", "unitedStates", "mexico", "brazil", "lasVegas", "qatar", "abuDhabi"};
-
-    private String location;
-     */
-
     private String race;
+
+    // race result files like AbuDhabi.json
     private Map<Integer, String> results;
 
-    public Race() {
-    }
+    // points snapshot file like pointsBeforeAbuDhabi.json
+    private Map<String, Integer> points;
 
-    // getters
-    public Map<Integer, String> getResults() {
-        return this.results;
-    }
+    public Race() {}
 
-    public String getDriver(int p) {
-        return results.get(p);
-    }
+    public String getRace() { return race; }
+    public void setRace(String race) { this.race = race; }
 
-    public void setRace(String race) {
-        this.race = race;
+    public Map<Integer, String> getResults() { return results; }
+    public void setResults(Map<Integer, String> results) { this.results = results; }
 
-    /*
-    // setters
-
-    }
-    */
-
-    }
+    public Map<String, Integer> getPoints() { return points; }
+    public void setPoints(Map<String, Integer> points) { this.points = points; }
 }
