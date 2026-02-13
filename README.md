@@ -51,9 +51,6 @@ Notes:
 
 ---
 
-## `AbuDhabi.json`
-Race lineup by finishing position.
-
 ## Known issue / planned refactor
 In the simplified model (3 contenders, positions P1–P10 plus P11 = “11th or worse”, no duplicate positions), the total number of possible contender-only assignments is **11 × 10 × 9 = 990**.  
 But the sum of “championship-winning” permutations produced across all contenders is 1012 permutations.
